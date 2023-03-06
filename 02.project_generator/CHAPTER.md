@@ -22,17 +22,17 @@ Run the following command to generate a new Fastify application:
 
 
 ```
-$> fastify generate hello --esm
+$> fastify generate book-api --esm
 ```
 
 The `--esm` flag is used to generate the project using the ESM module system. This is
 generally a good idea for new projects written in es6.
 
-A new directory called `hello` will be created. This is the root directory of the
+A new directory called `book-api` will be created. This is the root directory of the
 application. The project structure will look like this:
 
 ```
-hello
+book-api
 ├── app.js
 ├── package.json
 ├── plugins
@@ -54,19 +54,32 @@ hello
         └── root.test.js
 ```
 
+The rest of this tutorial will be spent exploring the generated files and directories.
+But here's a quick overview:
+
+1. `app.js` - The entry point for the application. This file is responsible for starting
+   the application and loading the routes.
+2. `routes` - This directory contains the route definitions for the application.
+3. `plugins` - This directory contains the plugin definitions for the application.
+4. `test` - This directory contains the test files for the application.
+
+In this chapter we'll cover the basics of routes.
+
+Be sure to read the [fastify-cli documentation](https://github.com/fastify/fastify-cli/blob/master/README.md)
+
 ## Run the application
 
-Change into the `hello` directory and install the dependencies:
+Change into the `book-api` directory and install the dependencies:
 
 ```
-$> cd hello
+$> cd book-api
 $> npm install
 ```
 
 Start the application:
 
 ```
-$> npm start
+$> npm run dev
 ```
 
 The application will start and listen on port 3000. You can test it by opening a browser
@@ -96,6 +109,15 @@ export default async function (fastify, opts) {
 }
 ```
 
+Now the url `http://localhost:3000/time` will respond with the current time, something
+like this:
+
+```json
+{
+    "time": "2021-01-01T12:00:00.000Z"
+}
+```
+
 ## What's happening?
 
 A route consists of a path and a handler function.
@@ -106,6 +128,13 @@ The handler function is responsible for generating the response to the request.
 
 The the code snippet above, we define a route that matches the path `/time` and responds
 with the current time.
+
+## Code
+
+The code for this chapter is available here;
+
+https://github.com/mukund-kri/fastify-tutorial-code-bookapi/tree/02-project-generator
+
 
 ## Exercise 1
 
