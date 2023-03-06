@@ -31,11 +31,20 @@ So we need to implement the above routes / endpoints.
 
 ## Implementation
 
-### 1. Generate a new project
-First we need to generate a new project using the `fastify-cli` tool. Like in section
-2, generate a new project using `fastify-cli` called books. Remember to use --esm 
-option.
+Before we get started with api itself, let's do some cleanup. We will remove the
+`example` and `time` routes, as we no longer need them. Also let's remove the
+`example` route test files.
 
+```shell
+$> rm -rf routes/example
+$> rm -rf routes/time.js
+$> rm -rf test/routes/example.test.js
+```
+
+I am adding only code snippets in this chapter. You can find the complete code in the
+repository here:
+
+https://github.com/mukund-kri/fastify-tutorial-code-bookapi/tree/05-basic-rest-api
 
 ### 2. Create books.js and add basic router
 
@@ -43,6 +52,11 @@ Now let's create a new file called `books.js` in the `routes` folder. This file 
    contain the routes for the `books` resource.
 
 ```js
+
+export default async function (fastify, opts) {
+    // the routes will come here
+}
+
 ```
 
 Well add all the routes for the `books` resource in this file in the following sections.
@@ -52,7 +66,12 @@ Well add all the routes for the `books` resource in this file in the following s
 Let's add the first route. The `GET /books` route will return all the books. Add the
 following code to the `books.js` file.
 
+Inside exported function, add the following code:
+
 ```js
+fastify.get('/books', async function (request, reply) {
+    return books
+})
 ```
 
 Note: the books here represented in a simple array. In a real world application, you
@@ -81,6 +100,12 @@ Let's add the second route. The `GET /books/:isbn` route will return a book by i
 following code to the `books.js` file.
 
 ```js
+
+    // Book details, get by isbn
+    fastify.get(`${BOOKS_ROOT}/:isbn`, async function (request, reply) {
+        const isbn = request.params.isbn
+        const book = books.find(book => book.isbn == isbn)
+        return b   
 ```
 
 The request `http://localhost:3000/books/978-0544003415` should return the following
@@ -94,15 +119,25 @@ JSON:
 }
 ```
 
+Note: in the url note the `:` before the `isbn`. This is a dynamic parameter. The
+value of the parameter will be available in the `request.params.isbn` property.
+
 ### 5. `POST /books` route
 
 Let's add the third route. The `POST /books` route will create a new book. Add the
 following code to the `books.js` file.
 
 ```js
+    // Add a new book
+    fastify.post(`${BOOKS_ROOT}`, async function (request, reply) {
+        const book = request.body
+        books.push(book)
+        return book
+    })
 ```
 
-The request `http://localhost:3000/books` with the following JSON in the request body:
+A POST request to `http://localhost:3000/books` with the following JSON in the request 
+body:
 
 ```json
 {
@@ -112,7 +147,7 @@ The request `http://localhost:3000/books` with the following JSON in the request
 }
 ```
 
-This should create a new book and return the following JSON:
+Should create a new book and return the following JSON:
 
 ```json
 {
@@ -128,6 +163,16 @@ Let's add the fourth route. The `PUT /books/:isbn` route will update a book by i
 following code to the `books.js` file.
 
 ```js
+    // Update a book
+    fastify.put(`${BOOKS_ROOT}/:isbn`, async function (request, reply) {
+        const isbn = request.params.isbn
+        const updatedBook = {
+            isbn,
+            ...request.body
+        }
+        books = books.map(book => book.isbn == isbn ? updatedBook : book)
+        return updatedBook
+    })
 ```
 
 The request `http://localhost:3000/books/978-0553384611` with the following JSON in the request body:
@@ -155,6 +200,12 @@ Let's add the fifth route. The `DELETE /books/:isbn` route will delete a book by
 following code to the `books.js` file.
 
 ```js
+    // Delete a book
+    fastify.delete(`${BOOKS_ROOT}/:isbn`, async function (request, reply) {
+        const isbn = request.params.isbn
+        books = books.filter(book => book.isbn != isbn)
+        return { message: 'Book deleted' }
+    })
 ```
 
 The request `http://localhost:3000/books/978-0553384611` should delete the book and
