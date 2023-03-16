@@ -13,8 +13,8 @@ Features of fastify-cli generated apps related to testing:
 
 1. All testing code goes in the `test` folder.
 2. All test files must end with `.test.js`.
-3. There is a seperate folder for route tests.
-4. There is a seperate folder for plugin tests. (Not covered in this tutorial)
+3. There is a separate folder for route tests.
+4. There is a separate folder for plugin tests. (Not covered in this tutorial)
 5. The organization of routes tests mirrors the organization of routes in the `routes` 
    folder.
 
