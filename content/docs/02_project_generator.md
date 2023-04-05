@@ -1,3 +1,8 @@
+---
+title: Project Generator
+weight: 2
+---
+
 # Using the fastify-cli tool
 
 Fastify-cli is a command line tool that eases developing fastify applications. Let's
@@ -66,7 +71,6 @@ But here's a quick overview:
 In this chapter we'll cover the basics of routes.
 
 Be sure to read the [fastify-cli documentation](https://github.com/fastify/fastify-cli/blob/master/README.md)
-
 ## Run the application
 
 Change into the `book-api` directory and install the dependencies:

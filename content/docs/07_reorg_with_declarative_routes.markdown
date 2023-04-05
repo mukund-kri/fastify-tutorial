@@ -1,3 +1,8 @@
+---
+title: Reorganizing our routes with declarative routes
+weight: 7
+---
+
 # Reorganizing our routes with declarative routes
 
 We have covered a lot in the previous chapters. Our `books.js` file is getting bigger and bigger. It is time to reorganize our routes into separate files. We will also use the declarative routes feature of Fastify to make our code more readable.

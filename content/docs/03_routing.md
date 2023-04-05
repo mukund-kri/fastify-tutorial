@@ -1,3 +1,8 @@
+---
+title: Routing
+date: 2023-03-28
+weight: 3
+---
 # Routing
 
 Let's dig a little deeper into Fastify's routing system. Since fastify is minimalistic,

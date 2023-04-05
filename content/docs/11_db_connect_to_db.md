@@ -1,3 +1,8 @@
+---
+title: "Connect to a database"
+weight: 11
+---
+
 # Adding a database to your project
 
 Until now, we have been using a simple array to store the books. In a real world application, you will use a database to store the books. In this chapter, we will add a database to our project.

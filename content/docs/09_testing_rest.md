@@ -1,3 +1,8 @@
+---
+title: Testing REST APIs
+weight: 9
+---
+
 # Testing with fastify-cli generated apps
 
 As we covered the fastify-cli generated apps provide a structure to fastify 

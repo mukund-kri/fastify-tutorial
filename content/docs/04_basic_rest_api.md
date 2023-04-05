@@ -1,3 +1,8 @@
+---
+title: Basic REST API with fastify
+weight: 4
+---
+
 # Basic REST API with fastify
 
 In this chapter, we will build a basic REST API using `fastify`. We will use the 

@@ -1,3 +1,8 @@
+---
+title: Testing Basics
+weight: 8
+---
+
 # Developer testing
 
 ## What is developer testing?

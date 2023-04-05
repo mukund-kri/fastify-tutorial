@@ -1,3 +1,8 @@
+---
+title: Error handling
+weight: 5
+---
+
 # Error handling
 
 In this chapter we'll explore how to handle errors in our REST API. We'll start by 

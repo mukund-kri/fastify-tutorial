@@ -1,3 +1,8 @@
+---
+title: Validation
+weight: 6
+---
+
 # Data validation
 
 In a web API application, data both comes in and goes out. We obviously have to
