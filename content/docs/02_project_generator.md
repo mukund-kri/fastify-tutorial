@@ -12,8 +12,8 @@ explore by generating and running a basic fastify application.
 
 Install the fastify-cli tool globally. This will make the `fastify` command available:
 
-```
-$> npm install --global fastify-cli
+```shell
+> npm install --global fastify-cli
 ```
 
 ## Generate a basic fastify application
@@ -26,8 +26,8 @@ basic file structure and configuration yourself.
 Run the following command to generate a new Fastify application:
 
 
-```
-$> fastify generate book-api --esm
+```shell
+> fastify generate book-api --esm
 ```
 
 The `--esm` flag is used to generate the project using the ESM module system. This is
@@ -75,15 +75,15 @@ Be sure to read the [fastify-cli documentation](https://github.com/fastify/fasti
 
 Change into the `book-api` directory and install the dependencies:
 
-```
-$> cd book-api
-$> npm install
+```shell
+> cd book-api
+> npm install
 ```
 
 Start the application:
 
-```
-$> npm run dev
+```shell
+> npm run dev
 ```
 
 The application will start and listen on port 3000. You can test it by opening a browser
