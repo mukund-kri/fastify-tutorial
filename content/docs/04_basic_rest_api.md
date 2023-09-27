@@ -46,10 +46,7 @@ $> rm -rf routes/time.js
 $> rm -rf test/routes/example.test.js
 ```
 
-I am adding only code snippets in this chapter. You can find the complete code in the
-repository here:
-
-https://github.com/mukund-kri/fastify-tutorial-code-bookapi/tree/04-basic-rest-api
+{{<fullcode "https://github.com/mukund-kri/fastify-tutorial-code-bookapi/tree/04-basic-rest-api">}}
 
 ### 2. Create books.js and add basic router
 

@@ -8,6 +8,8 @@ weight: 2
 Fastify-cli is a command line tool that eases developing fastify applications. Let's
 explore by generating and running a basic fastify application.
 
+{{<fullcode "https://github.com/mukund-kri/fastify-tutorial-code-bookapi/tree/02-project-generator">}}
+
 ## Install fastify-cli
 
 Install the fastify-cli tool globally. This will make the `fastify` command available:
@@ -132,12 +134,6 @@ The handler function is responsible for generating the response to the request.
 
 The the code snippet above, we define a route that matches the path `/time` and responds
 with the current time.
-
-## Code
-
-The code for this chapter is available here;
-
-https://github.com/mukund-kri/fastify-tutorial-code-bookapi/tree/02-project-generator
 
 
 ## Exercise 1

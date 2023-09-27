@@ -51,6 +51,8 @@ exist, we should return a 404 error.
 Let's fix the code from the previous chapter where we need to check for and return a 
 404 error.
 
+{{<fullcode "https://github.com/mukund-kri/fastify-tutorial-code-bookapi/tree/05-error-handling">}}
+
 ### Case 1 - `GET /books`
 
 Here, there is no need for 404. Let's look at the edge case were there are no books
