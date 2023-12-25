@@ -1,6 +1,6 @@
 ---
 title: Documenting REST APIs
-weight: 10
+weight: 52
 ---
 
 ## TODO

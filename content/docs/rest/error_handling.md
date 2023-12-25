@@ -1,6 +1,6 @@
 ---
 title: Error handling
-weight: 5
+weight: 32
 ---
 
 # Error handling

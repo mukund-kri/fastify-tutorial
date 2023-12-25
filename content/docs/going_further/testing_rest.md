@@ -1,6 +1,6 @@
 ---
 title: Testing REST APIs
-weight: 9
+weight: 51
 ---
 
 # Testing with fastify-cli generated apps

@@ -1,6 +1,6 @@
 ---
 title: "Connect to a database"
-weight: 11
+weight: 41
 ---
 
 # Adding a database to your project

@@ -1,6 +1,6 @@
 ---
 title: Testing Basics
-weight: 8
+weight: 23
 ---
 
 # Developer testing

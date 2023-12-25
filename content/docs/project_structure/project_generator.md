@@ -1,6 +1,6 @@
 ---
 title: Project Generator
-weight: 2
+weight: 21
 ---
 
 # Using the fastify-cli tool

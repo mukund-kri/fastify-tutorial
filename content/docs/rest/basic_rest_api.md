@@ -1,6 +1,6 @@
 ---
 title: Basic REST API with fastify
-weight: 4
+weight: 31
 ---
 
 # Basic REST API with fastify

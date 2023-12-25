@@ -1,9 +1,9 @@
 ---
-weight: 1
+weight: 10
 title: Getting started
 ---
 
-# Getting started
+# Getting starte
 
 ## Pre-requisites
 

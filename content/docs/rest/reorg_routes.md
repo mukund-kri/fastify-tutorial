@@ -1,6 +1,6 @@
 ---
 title: Reorganizing our routes with declarative routes
-weight: 7
+weight: 34
 ---
 
 # Reorganizing our routes with declarative routes
