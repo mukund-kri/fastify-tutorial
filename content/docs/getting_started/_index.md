@@ -3,7 +3,11 @@ weight: 10
 title: Getting started
 ---
 
-# Getting starte
+# Getting started
+
+In this section we create a fully functional web server in one file, with a few lines
+of code. It won't do much, just return "hello world". But it will be a good starting
+point for our journey.
 
 ## Pre-requisites
 
@@ -61,14 +65,17 @@ The above code exposes a single url "/" an this returns a very simple json.
 ```
 
 
-How the hell did the browser get a JSON?
+## How the hell did the browser get a JSON?
 
-Request flow?
-
-# Exercise
+This requires a bit of explanation. We'll cover the `http architecture` in class. This
+is going to be the core of your knowledge in developing web applications. 
+ 
+## Exercise
 
 Add anther *route* `/bye' that returns the following json.
 
 ```json
 {"message": "Good bye world"}
 ```
+
+{{<pagebottomnav>}}

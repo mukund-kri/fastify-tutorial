@@ -1,7 +1,5 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'fastify basics'
+title = 'Fastify Basics'
 
-theme = 'hugo-book' 
-
-
+theme = 'hugo-book'
