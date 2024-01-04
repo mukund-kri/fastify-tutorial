@@ -5,7 +5,9 @@ weight: 34
 
 # Reorganizing our routes with declarative routes
 
-We have covered a lot in the previous chapters. Our `books.js` file is getting bigger and bigger. It is time to reorganize our routes into separate files. We will also use the declarative routes feature of Fastify to make our code more readable.
+We have covered a lot in the previous chapters. Our `books.js` file is getting bigger 
+and bigger. It is time to reorganize our routes into separate files. We will also use
+ the declarative routes feature of Fastify to make our code more readable.
 
 ## What are these `declarative routes`?
 
@@ -19,34 +21,57 @@ We have been using the shorthand declaration so far. In this chapter, we will us
 full declaration to reorganize our routes into many files, the idea is to make our code
 more readable.
 
+## [Side Note] What is declarative programming?
+
+**Declarative Programming**: This is a programming paradigm where you describe what you want to achieve without necessarily detailing how to achieve it. It focuses on what the program should accomplish. 
+
+So in this case our route is not a function that tell us what to do when a request comes
+in. 
+
+Instead it is a description of what we want to do when a request comes in object form.
+We'll see how this works in a bit.
+
 ## Reorganizing our routes
+Previously each `resource` had its own file. This single file contained all the routes
+for that resource. 
 
-Instead of having all the routes in a single file, let's make a folder called `books`
-with `index.js` as our entry point. The plan is to split this way:
+In the new approach, each `resource` will have its own folder. This folder will contain
+3 files:
 
-## 1. index.js. 
+- `index.js` - This will contain the declarative descriptions for routes for the
+ resource.
+- `handlers.js` - This will contain the handlers (running code) for the routes.
+- `schemas.js` - This will contain the schemas (structure of incoming and outgoing
+ urls, json, headers etc.) for the routes.
 
-This will be the entry point for the `books` routes. It will have the exported
-portions of the routes. 
+### 1. index.js. 
 
-## 2. Separate the db code
+Let's look at the `GET /books` route, to better understand the declaration.
 
-We have been using the `books` array to store the books. Lets just move this array to a
-separate file called `db.js`. 
+```js
+    fastify.route({
+        method: 'GET',
+        url: '/',
+        schema: allBooksSchema,
+        handler: getBooks
+    })
+```
 
-## 3. separate out the handlers
+Notes:
 
-Handlers are the functions that are called when a route is matched. We will move the
-handlers to a separate file called `handlers.js`.
+- The `route` in now a plain object which declares how the route should be handled.
+- The `method` parameter is the http method for the route. Here its `GET`.
+- The `url` parameter describes to which url this route will handle. Here its `/`.
+- The `schema` parameter describes the schema for the route. This takes care of the validation.
+- Finally the `handler` parameter is the function that will be called when the route is matched.
 
-## 4. separate out the schemas
+### 2. handlers.js
 
-We will move the schemas to a separate file called `schemas.js`.
+TODO
 
-Then we'll bring it all together in `index.js`.
+### 3. schemas.js
 
-
-The code looks much cleaner now, right? 
+TODO
 
 ## Exercise
 
