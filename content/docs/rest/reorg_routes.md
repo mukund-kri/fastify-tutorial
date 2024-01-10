@@ -79,3 +79,5 @@ Do the same reorganization for the `authors` routes.
 
 
 
+
+{{<pagebottomnav>}}

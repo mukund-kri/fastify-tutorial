@@ -16,4 +16,4 @@ utility. This is a very opinionated approach, but it is also very simple and eas
 to get started. Towards the end of bootcamp we'll have a series of Sessions / Guest
 Lectures where we explore how real companies structure their projects.
 
-{{<pagebottomnav>}}
+{{<chaptertoc>}}

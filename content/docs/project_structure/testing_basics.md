@@ -1,6 +1,6 @@
 ---
 title: Testing Basics
-weight: 23
+weight: 24
 ---
 
 # Developer testing
@@ -90,3 +90,5 @@ project.
 ```js
 ```
 
+
+{{<pagebottomnav>}}

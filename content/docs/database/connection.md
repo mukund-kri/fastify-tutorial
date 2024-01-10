@@ -156,3 +156,5 @@ Let's look at the model file first. It will look something like this:
 ## Exercises
 
 
+
+{{<pagebottomnav>}}

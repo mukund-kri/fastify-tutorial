@@ -32,3 +32,5 @@ fastify-cli generated apps.
 First let's copy the books project from the previous chapter into the current chapter
 and then add tests to it.
 
+
+{{<pagebottomnav>}}

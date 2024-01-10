@@ -81,3 +81,5 @@ New rule for ISBN validation:
 2. optional hyphens after the 1st, 5th, and 9th digits
 3. 10th digit can be a number or an X 
 
+
+{{<pagebottomnav>}}

@@ -140,3 +140,5 @@ with the current time.
 
 Add a new route that responds with the current date. The path should be `/date`. The 
 date should have a human readable format like `01 Jan 2021`.
+
+{{<pagebottomnav>}}

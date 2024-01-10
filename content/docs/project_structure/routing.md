@@ -1,7 +1,7 @@
 ---
 title: Routing
 date: 2023-03-28
-weight: 22
+weight: 23
 ---
 # Routing
 
@@ -101,3 +101,5 @@ Now let's test the `POST` method using `postman`. You should see the following
 5. Commit the changes and push to github. And submit the link to the github repo
    in the bootcamp.*
 
+
+{{<pagebottomnav>}}
