@@ -37,30 +37,6 @@ of the `/greet` url
 
 Now our app should be able to respond to the `GET` method of the `/greet` url.
 
-## Postman
-
-Start using the `postman` tool to test your routes. It is a great tool for
-testing HTTP APIs. Download and install the free version from:
-
-
-https://www.postman.com/
-
-
-**BOOTCAMP NOTE**: You are required to use the `postman` tool in the bootcamp. All the 
-demos/exercises etc. have been tested using `postman`.
-
-**BOOTCAMP NOTE**: I know that there are dozens of tools that can be used to test
-HTTP APIs. But we will use `postman` to standardize the evaluation of demos/exercises 
-etc.
-
-You should invest some time in learning how to use `postman`. The following is
-a good resource to get started:
-
-https://www.youtube.com/watch?v=VywxIQ2ZXw4&t=1622s
-
-Note: this a full tutorial on `postman`. Though you need to master the entire video,
-the first ~20 minutes are enough for this section.
-
 ## testing routes
 
 Go ahead and test the `/greet` route using `postman`. You should see the following
